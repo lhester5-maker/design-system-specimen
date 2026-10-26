@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design-System Specimen | Independent Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Page Header / Context -->
+  <header>
+    <h1>Design System Specimen</h1>
+    <p><strong>Context:</strong> Independent Creative Designer Portfolio</p>
+    <p><strong>Audience:</strong> Potential clients, creative directors, and collaborators.</p>
+  </header>
+
+  <!-- S1: Foundation and Reset -->
+  <section id="s1" class="specimen-section">
+    <h2>S1: Foundation and Reset</h2>
+    <p><strong>Reset Note:</strong> We utilize a compact selective reset rather than a global wipe. Key decisions include:</p>
+    <ul>
+      <li><strong>Box-Sizing:</strong> Enforcing <code>box-sizing: border-box</code> universally to make padding and border calculations predictable.</li>
+      <li><strong>Selective Margins:</strong> Stripping default browser margins strictly from layout containers (like body and headings) while preserving useful spacing semantics elsewhere.</li>
+    </ul>
+  </section>
+
+  <!-- S2: Token Inventory -->
+  <section id="s2" class="specimen-section">
+    <h2>S2: Token Inventory</h2>
+    <p>Core custom properties defined on <code>:root</code>:</p>
+    <ul>
+      <li><code>--color-bg</code>: Page canvas background</li>
+      <li><code>--color-surface</code>: Card / container surface background</li>
+      <li><code>--color-text</code>: Primary body text color</li>
+      <li><code>--color-action</code>: Primary interactive accent color</li>
+      <li><code>--measure-max</code>: Optimal readable line length (65ch)</li>
+    </ul>
+  </section>
+
+  <!-- S3: Typography -->
+  <section id="s3" class="specimen-section">
+    <h2>S3: Typography Specimen</h2>
+    <h1>Main Portfolio Heading (H1)</h1>
+    <h3>Project Subheading (H3)</h3>
+    <p>This long-form body paragraph demonstrates optimal line height, font sizing, and measure constraints to ensure maximum legibility across different viewports.</p>
+    <ul>
+      <li>Case study item one</li>
+      <li>Case study item two</li>
+    </ul>
+    <p><small>Metadata / Small text: Published October 2026</small></p>
+    <p>Inline code snippet: <code>font-family: var(--font-body);</code></p>
+    <p>Sample text link: <a href="#s3">Explore full design guidelines</a>.</p>
+  </section>
+
+  <!-- S4: Actions and States -->
+  <section id="s4" class="specimen-section">
+    <h2>S4: Actions and States</h2>
+    <p>
+      <a href="#s4" class="text-link">Text Link State</a>
+    </p>
+    <p>
+      <button class="btn btn-primary">Primary Button</button>
+      <button class="btn btn-secondary">Secondary Button</button>
+      <button class="btn btn-primary" disabled>Disabled State</button>
+    </p>
+  </section>
+
+  <!-- S5: Surfaces and Content Patterns -->
+  <section id="s5" class="specimen-section">
+    <h2>S5: Surfaces and Content Patterns</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Project Card One</h3>
+        <p>A sample surface pattern showcasing border radius, padding, and subtle elevation shadows.</p>
+      </div>
+      <div class="card">
+        <h3>Project Card Two</h3>
+        <p>A second card variant used for grid layouts and content grouping.</p>
+      </div>
+    </div>
+    <div class="notice-box">
+      <strong>Notice / Callout:</strong> Currently booking new freelance client projects for next quarter.
+    </div>
+    <div class="media-placeholder">
+      [ Media Placeholder: Project Mockup Screenshot ]
+    </div>
+  </section>
+
+  <!-- S6: Control Foundations -->
+  <section id="s6" class="specimen-section">
+    <h2>S6: Control Foundations</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Jane Doe">
+      </div>
+      <div class="form-group">
+        <label for="project-type">Project Type:</label>
+        <select id="project-type">
+          <option>Brand Identity</option>
+          <option>Web Design</option>
+          <option>UI/UX Strategy</option>
+        </select>
+      </div>
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox"> Send NDA agreement first
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+    </form>
+  </section>
+<!-- Default Theme Container -->
+<div class="specimen-container">
+  <!-- Sections S1 through S6 go here -->
+</div>
+
+<!-- Alternate Theme Container (Dark Mode View) -->
+<div class="specimen-container theme-alt" style="margin-top: 3rem; padding-top: 2rem; border-top: 3px dashed #666;">
+  <h2>Alternate Theme Preview (.theme-alt)</h2>
+  <!--<!-- S6: Control Foundations -->
+  <section id="s6" class="specimen-section">
+    <h2>S6: Control Foundations</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Jane Doe">
+      </div>
+      <div class="form-group">
+        <label for="project-type">Project Type:</label>
+        <select id="project-type">
+          <option>Brand Identity</option>
+          <option>Web Design</option>
+          <option>UI/UX Strategy</option>
+        </select>
+      </div>
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox"> Send NDA agreement first
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+    </form>
+  </section><!-- Duplicate or place an S4/S5/S6 section here to prove theme switching works! -->
+</div>
+</body>
+</html>

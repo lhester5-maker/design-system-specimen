@@ -1,0 +1,78 @@
+﻿DESIGN SYSTEM SPECIMEN - SUBMISSION RECORD
+Project Context: Independent Creative Designer Portfolio
+
+
+
+
+1. TEST RECORD
+
+
+- Responsive Viewports (320px, 768px, 1280px):
+  * Condition: Tested page across mobile (320px), tablet (768px), and desktop (1280px) widths.
+  * Expected Result: Content scales fluidly without horizontal overflow or clipping.
+  * Observed Result: At 320px, layout respects viewport bounds; max-measure (--measure-max: 65ch) successfully controls line length on wider screens.
+
+
+- Zoom (200% Browser Zoom):
+  * Condition:  browser zoom to 200%.
+  * Expected Result: Text and component containers scale proportionally using relative units (rem).
+  * Observed Result: Headings, body copy, and buttons remain readable and fully interactable without overlapping or breaking out of containers.
+
+
+- Keyboard Navigation:
+  * Condition: Navigated exclusively using tab keys.
+  * Expected Result: Visible focus rings appear on all links, buttons, and form controls in logical reading order.
+  * Observed Result: Custom focus outline styles (:focus-visible) provide clear, high-contrast visual tracking throughout both themes.
+
+
+- Contrast Check:
+  * Condition: Inspected text-to-background and interactive element contrast ratios in both light and dark themes.
+  * Expected Result: Meets WCAG accessibility standards for readability.
+  * Observed Result: Default and alternate theme color tokens maintain distinct, readable contrast.
+
+
+- Font Fallback:
+  * Condition: Temporarily blocked the preferred custom font import.
+  * Expected Result: Clean fallback to system font stack without layout failure.
+  * Observed Result: Swapped cleanly to system sans-serif stack; layout remained stable.
+
+
+- HTML & CSS Validation:
+  * Condition: Ran files through W3C validators.
+  * Expected Result: Zero syntax errors or deprecated properties.
+  * Observed Result: Validated successfully with no errors.
+
+
+- Publication Verification:
+  * Condition: Opened published URL in a private/incognito browser window.
+  * Expected Result: Styles, fonts, and layout load correctly from the public server.
+  * Observed Result: Published successfully and verified live.
+
+
+2. EVIDENCE-BASED REVISION
+- Initial Observation: During mobile viewport testing (320px), some card margins felt slightly cramped against the screen edges.
+
+
+- Revision: Adjusted spacing tokens to use 
+scalable relative spacing (--space-sm and --space-md), and added fluid padding rules to the parent `.specimen-section` containers.
+
+
+- Retest Result: Retested at 320px; the containers now breathe properly with comfortable inner margins and zero horizontal scroll.
+
+
+3. CODE DEFENSE
+
+
+- Reset Strategy: I chose a compact selective reset rather than a global reset and used universal box-sizing: border-box for sizing 
+
+
+- Token Hierarchy: Organized custom properties on :root into logical groups (colors, typography, layout measures, spacing, and radius) using consistent semantic naming conventions 
+
+
+- Scoped Alternate Theme: Implemented .theme-alt  as a scoped container override. By overriding token values (--color-bg, --color-surface, --color-text, etc.) inside that scope, all shared component rules apply automatically without requiring duplicate CSS code.
+
+
+4. AI DISCLOSURE- A meaningful assistance and verification record
+
+
+-Verification: All code was manually reviewed, verified in VS Code, tested across viewports and zoom levels, and tailored specifically to the independent designer portfolio project context.
